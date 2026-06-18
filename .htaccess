@@ -1,0 +1,6 @@
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# Redirect root to public/
+RewriteCond %{REQUEST_URI} !^/taskify/public/
+RewriteRule ^(.*)$ /taskify/public/$1 [L,QSA]
